@@ -69,21 +69,3 @@ emulation applications to Updatium. Made by [@RJNY](https://github.com/RJNY), mo
 | <a href="https://github.com/BrianJr03/Jarngreipr">Jarngreipr</a> | ❌ | ✅ |
 | <a href="https://github.com/blacksheepmvp/mjolnir">Mjolnir</a> | ❌ | ✅ |
 | <a href="https://github.com/langerhans/OdinTools">OdinTools</a> | ✅ | ✅ |
-| <a href="https://github.com/rexmont/Pixel-Guide-Android">PixelGuide</a> | ✅ | ✅ |
-
-## FAQ
-
-### A note about stable, beta, nightly and canary versions of the same app
-
-You cannot install more than one version of the same app. For example: You must choose between RetroArch (stable) or RetroArch (nightly). You cannot have both.
-
-To make things easier for beginners, I've omitted nightly, beta and canary versions where a stable
-one exists.
-
-You can manually add beta/nightly applications by using the links in the README
-
-### Can this break?
-
-Yes. Absolutely it can.
-Any of the scrapers that use regex can break if the application maintainers break convention.
-The applications pulling from GitHub are more stable and less likely to break.
