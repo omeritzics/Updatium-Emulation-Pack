@@ -945,25 +945,6 @@
       }
     },
     {
-      "id": "it.ottaviomiele.chd",
-      "url": "https://github.com/Ottavio97/CHDroid",
-      "author": "Ottavio97",
-      "name": "CHDroid",
-      "preferredApkIndex": 0,
-      "additionalSettings": {
-        "appName": "CHDroid",
-        "about": "CHD file converter for Android"
-      },
-      "categories": [
-        "Utilities"
-      ],
-      "allowIdChange": false,
-      "overrideSource": "GitHub",
-      "meta": {
-        "nameOverride": "CHDroid"
-      }
-    },
-    {
       "id": "com.izzy2lost.x1box",
       "url": "https://github.com/rfandango/xemu-android",
       "author": "rfandango",
