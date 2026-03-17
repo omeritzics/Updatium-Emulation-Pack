@@ -50,7 +50,7 @@ adb-screenshot:
 # Push a release JSON to the connected Android device's Downloads folder
 [group('ADB')]
 adb-push variant="json":
-    @{{ if variant == "json" { "adb push obtainium-emulation-pack-latest.json /sdcard/Download/obtainium-emulation-pack-latest.json" } else if variant == "ds" { "adb push obtainium-emulation-pack-dual-screen-latest.json /sdcard/Download/obtainium-emulation-pack-dual-screen-latest.json" } else { "echo 'Unknown variant: " + variant + ". Use json (default) or ds.'; exit 1" } }}
+    @{{ if variant == "json" { "adb push updatium-emulation-pack-latest.json /sdcard/Download/updatium-emulation-pack-latest.json" } else if variant == "ds" { "adb push updatium-emulation-pack-dual-screen-latest.json /sdcard/Download/updatium-emulation-pack-dual-screen-latest.json" } else { "echo 'Unknown variant: " + variant + ". Use json (default) or ds.'; exit 1" } }}
 
 # Generate output files
 generate *args:
