@@ -18,8 +18,7 @@ emulation applications to Updatium. Made by [@RJNY](https://github.com/RJNY), mo
 | <a href="https://duckstation-mirror.rmacias.workers.dev">DuckStation</a> | ✅ | ✅ |
 | <a href="https://eden-emu.dev">Eden</a> | ✅ | ✅ |
 | <a href="https://github.com/flyinghead/flycast">Flycast</a> | ✅ | ✅ |
-| <a href="https://github.com/rafaelvcaetano/melonDS-android">MelonDS</a> | ✅ | ❌ |
-| <a href="https://github.com/SapphireRhodonite/melonDS-android">MelonDS (Dual-Screen)</a> | ❌ | ✅ |
+| <a href="https://github.com/SapphireRhodonite/melonDS-android">MelonDS (with Dual-Screen support)</a> | ✅ | ✅ |
 | <a href="https://github.com/Trixarian/NetherSX2-patch">NetherSX2-Patch</a> | ✅ | ✅ |
 | <a href="https://github.com/Macs75/pico8-android">Pico8 Android</a> | ✅ | ✅ |
 | <a href="https://purei.org">Play!</a> | ✅ | ✅ |
