@@ -31,8 +31,8 @@ _generate-readme: _generate-table
 
 [private]
 _generate-standard:
-    @python scripts/minify-json.py src/applications.json obtainium-emulation-pack-latest.json --variant standard
+    @python scripts/minify-json.py src/applications.json updatium-emulation-pack-latest.json --variant standard
 
 [private]
 _generate-dual-screen:
-    @python scripts/minify-json.py src/applications.json obtainium-emulation-pack-dual-screen-latest.json --variant dual-screen
+    @python scripts/minify-json.py src/applications.json updatium-emulation-pack-dual-screen-latest.json --variant dual-screen
