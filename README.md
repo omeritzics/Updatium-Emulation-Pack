@@ -62,7 +62,6 @@ emulation applications to Updatium. Made by [@RJNY](https://github.com/RJNY), mo
 | Application Name | Included in export json? | Included in DS json? |
 |------------------|---------------------------|----------------------|
 | <a href="https://github.com/Pollux-MoonBench/Bifrost">Bifrost</a> | ✅ | ✅ |
-| <a href="https://github.com/Ottavio97/CHDroid">CHDroid</a> | ✅ | ✅ |
 | <a href="https://github.com/Producdevity/EmuReadyAppReleases">EmuReady Lite</a> | ✅ | ✅ |
 | <a href="https://github.com/BinaryQuantumSoul/esde_android_apps">ES-DE Android Apps</a> | ✅ | ✅ |
 | <a href="https://github.com/RobZombie9043/es-de-companion">ES-DE Companion</a> | ❌ | ✅ |
