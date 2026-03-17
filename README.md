@@ -12,13 +12,11 @@ emulation applications to Updatium. Made by [@RJNY](https://github.com/RJNY), mo
 | <a href="https://github.com/aenu1/aps3e">aPS3e</a> | ✅ | ✅ |
 | <a href="https://github.com/ARMSX2/ARMSX2">ARMSX2</a> | ✅ | ✅ |
 | <a href="https://github.com/azahar-emu/azahar">Azahar</a> | ✅ | ✅ |
-| <a href="https://github.com/SSimco/Cemu">Cemu</a> | ✅ | ❌ |
-| <a href="https://github.com/sapphirerhodonite/cemu">Cemu (Dual-Screen)</a> | ❌ | ✅ |
+| <a href="https://github.com/sapphirerhodonite/cemu">Cemu (with Dual-Screen support)</a> | ✅ | ✅ |
 | <a href="https://github.com/weihuoya/citra">Citra MMJ</a> | ✅ | ✅ |
 | <a href="https://dolphin-emu.org">Dolphin Emulator</a> | ✅ | ✅ |
 | <a href="https://duckstation-mirror.rmacias.workers.dev">DuckStation</a> | ✅ | ✅ |
 | <a href="https://eden-emu.dev">Eden</a> | ✅ | ✅ |
-| <a href="https://github.com/Eden-CI/Nightly">Eden Nightly</a> | ❌ | ❌ |
 | <a href="https://github.com/flyinghead/flycast">Flycast</a> | ✅ | ✅ |
 | <a href="https://github.com/rafaelvcaetano/melonDS-android">MelonDS</a> | ✅ | ❌ |
 | <a href="https://github.com/SapphireRhodonite/melonDS-android">MelonDS (Dual-Screen)</a> | ❌ | ✅ |
@@ -89,18 +87,3 @@ You can manually add beta/nightly applications by using the links in the README
 Yes. Absolutely it can.
 Any of the scrapers that use regex can break if the application maintainers break convention.
 The applications pulling from GitHub are more stable and less likely to break.
-
-## Contributing
-
-Want to add an app or fix a config? See the [Contributing Guide](CONTRIBUTING.md) for setup instructions, how to add apps, and the pre-commit checklist.
-
-Quick version:
-
-```bash
-git clone https://github.com/RJNY/Obtainium-Emulation-Pack.git
-cd Obtainium-Emulation-Pack
-
-# Add or edit apps in src/applications.json (or use just add-app)
-just test      # verify configs resolve to real APKs
-just build     # test, validate, normalize, and generate all output files
-```
