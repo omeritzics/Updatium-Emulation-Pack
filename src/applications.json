@@ -207,52 +207,6 @@
       "overrideSource": "GitHub"
     },
     {
-      "id": "me.magnum.melonds",
-      "url": "https://github.com/rafaelvcaetano/melonDS-android",
-      "author": "rafaelvcaetano",
-      "name": "MelonDS",
-      "additionalSettings": {
-        "versionExtractionRegEx": "v?(.+)",
-        "matchGroupToUse": "$1",
-        "versionDetection": false,
-        "appName": "MelonDS",
-        "about": "Nintendo DS emulator"
-      },
-      "categories": [
-        "Emulator"
-      ],
-      "allowIdChange": false,
-      "overrideSource": "GitHub",
-      "meta": {
-        "includeInDualScreen": false
-      }
-    },
-    {
-      "id": "me.magnum.melonds.nightly",
-      "url": "https://github.com/rafaelvcaetano/melonDS-android",
-      "author": "rafaelvcaetano",
-      "name": "MelonDS Nightly",
-      "preferredApkIndex": 0,
-      "additionalSettings": {
-        "includePrereleases": true,
-        "fallbackToOlderReleases": false,
-        "useLatestAssetDateAsReleaseDate": true,
-        "versionDetection": false,
-        "releaseDateAsVersion": true,
-        "apkFilterRegEx": ".*nightly.*",
-        "appName": "MelonDS (nightly)",
-        "about": "Nintendo DS emulator (nightly builds)"
-      },
-      "categories": [
-        "Emulator"
-      ],
-      "allowIdChange": false,
-      "overrideSource": "GitHub",
-      "meta": {
-        "excludeFromExport": true
-      }
-    },
-    {
       "id": "com.virtualapplications.play",
       "url": "https://purei.org/downloads/play/stable/",
       "author": "jpd002",
@@ -705,14 +659,14 @@
     {
       "id": "me.magnum.melonds",
       "url": "https://github.com/SapphireRhodonite/melonDS-android",
-      "author": "SapphireRhodonite",
+      "author": "rafaelvcaetano & SapphireRhodonite",
       "name": "MelonDS",
       "preferredApkIndex": 0,
       "additionalSettings": {
         "versionExtractionRegEx": "v?(.+)",
         "matchGroupToUse": "$1",
         "versionDetection": false,
-        "appName": "MelonDS (Dual-Screen)",
+        "appName": "MelonDS",
         "about": "Nintendo DS emulator"
       },
       "categories": [
@@ -721,14 +675,14 @@
       "allowIdChange": true,
       "overrideSource": "GitHub",
       "meta": {
-        "includeInStandard": false,
-        "nameOverride": "MelonDS (Dual-Screen)"
+        "includeInStandard": yes,
+        "nameOverride": "MelonDS"
       }
     },
     {
       "id": "info.cemu.cemu",
       "url": "https://github.com/sapphirerhodonite/cemu",
-      "author": "SapphireRhodonite",
+      "author": "SSimco & SapphireRhodonite",
       "name": "Cemu",
       "preferredApkIndex": 0,
       "additionalSettings": {
