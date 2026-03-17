@@ -620,23 +620,6 @@
       "overrideSource": "GitHub"
     },
     {
-      "id": "com.github.catfriend1.syncthingfork",
-      "url": "https://github.com/researchxxl/syncthing-android",
-      "author": "researchxxl",
-      "name": "Syncthing-Fork",
-      "preferredApkIndex": 0,
-      "additionalSettings": {
-        "verifyLatestTag": true,
-        "apkFilterRegEx": "syncthingfork_release.*\\.apk$",
-        "about": "Continuous file synchronization"
-      },
-      "categories": [
-        "Utilities"
-      ],
-      "allowIdChange": true,
-      "overrideSource": "GitHub"
-    },
-    {
       "id": "com.quantumsoul.esde_android",
       "url": "https://github.com/BinaryQuantumSoul/esde_android_apps",
       "author": "BinaryQuantumSoul",
