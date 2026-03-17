@@ -830,24 +830,6 @@
       "overrideSource": "GitHub"
     },
     {
-      "id": "app.nanostack.pixelguide",
-      "url": "https://github.com/rexmont/Pixel-Guide-Android",
-      "author": "rexmont",
-      "name": "Pixel Guide Android",
-      "preferredApkIndex": 0,
-      "additionalSettings": {
-        "about": "Pixel art scaling and display guide"
-      },
-      "categories": [
-        "Utilities"
-      ],
-      "allowIdChange": false,
-      "overrideSource": "GitHub",
-      "meta": {
-        "nameOverride": "PixelGuide"
-      }
-    },
-    {
       "id": "com.producdevity.emureadylite",
       "url": "https://github.com/Producdevity/EmuReadyAppReleases",
       "author": "Producdevity",
