@@ -3,14 +3,6 @@
 [Updatium](https://github.com/omeritzics/Updatium) official import file that adds popular Android
 emulation applications to Updatium. Made by [@RJNY](https://github.com/RJNY), modified by [@omeritzics](https://github.com/omeritzics).
 
-## Prerequisite
-
-> [!TIP]
-> Which APK you need to download will depend on your device.
-> If you're unsure, you can download `app-release.apk`
-
-Download and Install the [latest release of Updatium](https://github.com/omeritzics/Updatium/releases/latest)
-
 ## Applications
 
 ### Emulator
