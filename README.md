@@ -16,22 +16,17 @@ emulation applications to Updatium. Made by [@RJNY](https://github.com/RJNY), mo
 | <a href="https://github.com/sapphirerhodonite/cemu">Cemu (Dual-Screen)</a> | ❌ | ✅ |
 | <a href="https://github.com/weihuoya/citra">Citra MMJ</a> | ✅ | ✅ |
 | <a href="https://dolphin-emu.org">Dolphin Emulator</a> | ✅ | ✅ |
-| <a href="https://dolphin-emu.org">Dolphin Emulator (Dev build)</a> | ❌ | ❌ |
-| <a href="https://github.com/Medard22/Dolphin-MMJR2-VBI">Dolphin-MMJR2-VBI</a> | ❌ | ❌ |
 | <a href="https://duckstation-mirror.rmacias.workers.dev">DuckStation</a> | ✅ | ✅ |
 | <a href="https://eden-emu.dev">Eden</a> | ✅ | ✅ |
 | <a href="https://github.com/Eden-CI/Nightly">Eden Nightly</a> | ❌ | ❌ |
 | <a href="https://github.com/flyinghead/flycast">Flycast</a> | ✅ | ✅ |
 | <a href="https://github.com/rafaelvcaetano/melonDS-android">MelonDS</a> | ✅ | ❌ |
 | <a href="https://github.com/SapphireRhodonite/melonDS-android">MelonDS (Dual-Screen)</a> | ❌ | ✅ |
-| <a href="https://github.com/rafaelvcaetano/melonDS-android">MelonDS Nightly</a> | ❌ | ❌ |
-| <a href="https://github.com/Trixarian/NetherSX2-classic">NetherSX2-Classic</a> | ❌ | ❌ |
 | <a href="https://github.com/Trixarian/NetherSX2-patch">NetherSX2-Patch</a> | ✅ | ✅ |
 | <a href="https://github.com/Macs75/pico8-android">Pico8 Android</a> | ✅ | ✅ |
 | <a href="https://purei.org">Play!</a> | ✅ | ✅ |
 | <a href="https://www.ppsspp.org/download">PPSSPP</a> | ✅ | ✅ |
 | <a href="https://www.retroarch.com">RetroArch (AArch64)</a> | ✅ | ✅ |
-| <a href="https://www.retroarch.com">RetroArch Nightly (AArch64)</a> | ❌ | ❌ |
 | <a href="https://github.com/RPCSX/rpcsx-ui-android">RPCSX</a> | ✅ | ✅ |
 | <a href="https://www.scummvm.org">ScummVM</a> | ✅ | ✅ |
 | <a href="https://vita3k.org">Vita3K</a> | ✅ | ✅ |
@@ -52,7 +47,6 @@ emulation applications to Updatium. Made by [@RJNY](https://github.com/RJNY), mo
 | Application Name | Included in export json? | Included in DS json? |
 |------------------|---------------------------|----------------------|
 | <a href="https://github.com/Producdevity/gamehub-lite">GameHub Lite</a> | ✅ | ✅ |
-| <a href="https://github.com/Producdevity/gamehub-lite">GameHub Lite (pre-release)</a> | ❌ | ❌ |
 | <a href="https://github.com/utkarshdalal/GameNative">GameNative</a> | ✅ | ✅ |
 | <a href="https://github.com/brunodev85/winlator">Winlator</a> | ✅ | ✅ |
 | <a href="https://github.com/coffincolors/winlator">Winlator CMod</a> | ✅ | ✅ |
@@ -64,7 +58,6 @@ emulation applications to Updatium. Made by [@RJNY](https://github.com/RJNY), mo
 |------------------|---------------------------|----------------------|
 | <a href="https://github.com/ClassicOldSong/moonlight-android">Artemis</a> | ✅ | ✅ |
 | <a href="https://github.com/moonlight-stream/moonlight-android">Moonlight</a> | ✅ | ✅ |
-| <a href="https://streamingdv.com">PXPlay</a> | ❌ | ❌ |
 
 ### Utilities
 
@@ -77,7 +70,6 @@ emulation applications to Updatium. Made by [@RJNY](https://github.com/RJNY), mo
 | <a href="https://github.com/RobZombie9043/es-de-companion">ES-DE Companion</a> | ❌ | ✅ |
 | <a href="https://github.com/BrianJr03/Jarngreipr">Jarngreipr</a> | ❌ | ✅ |
 | <a href="https://github.com/blacksheepmvp/mjolnir">Mjolnir</a> | ❌ | ✅ |
-| <a href="https://github.com/FeralAI/o2ptweaks.app">O2P Tweaks</a> | ❌ | ❌ |
 | <a href="https://github.com/langerhans/OdinTools">OdinTools</a> | ✅ | ✅ |
 | <a href="https://github.com/rexmont/Pixel-Guide-Android">PixelGuide</a> | ✅ | ✅ |
 
