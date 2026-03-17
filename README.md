@@ -88,7 +88,6 @@ Download and Install the [latest release of Updatium](https://github.com/omeritz
 | <a href="https://github.com/FeralAI/o2ptweaks.app">O2P Tweaks</a> | ❌ | ❌ |
 | <a href="https://github.com/langerhans/OdinTools">OdinTools</a> | ✅ | ✅ |
 | <a href="https://github.com/rexmont/Pixel-Guide-Android">PixelGuide</a> | ✅ | ✅ |
-| <a href="https://github.com/researchxxl/syncthing-android">Syncthing-Fork</a> | ✅ | ✅ |
 
 ## FAQ
 
