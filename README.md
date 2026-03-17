@@ -1,6 +1,6 @@
 # Updatium Emulation Pack
 
-An [Updatium](https://github.com/omeritzics/Updatium) import file that adds popular Android
+[Updatium](https://github.com/omeritzics/Updatium) official import file that adds popular Android
 emulation applications to Updatium. Made by [@RJNY](https://github.com/RJNY), modified by [@omeritzics](https://github.com/omeritzics).
 
 ## Prerequisite
