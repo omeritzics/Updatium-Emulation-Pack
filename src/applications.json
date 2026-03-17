@@ -35,25 +35,6 @@
       "overrideSource": "GitHub"
     },
     {
-      "id": "info.cemu.cemu",
-      "url": "https://github.com/SSimco/Cemu",
-      "author": "SSimco",
-      "name": "Cemu",
-      "preferredApkIndex": 0,
-      "additionalSettings": {
-        "releaseTitleAsVersion": true,
-        "about": "Wii U emulator"
-      },
-      "categories": [
-        "Emulator"
-      ],
-      "allowIdChange": false,
-      "overrideSource": "GitHub",
-      "meta": {
-        "includeInDualScreen": false
-      }
-    },
-    {
       "id": "org.citra.emu",
       "url": "https://github.com/weihuoya/citra",
       "author": "weihuoya",
@@ -752,7 +733,7 @@
       "preferredApkIndex": 0,
       "additionalSettings": {
         "releaseTitleAsVersion": true,
-        "appName": "Cemu (Dual-Screen)",
+        "appName": "Cemu",
         "about": "Wii U emulator"
       },
       "categories": [
@@ -761,8 +742,8 @@
       "allowIdChange": false,
       "overrideSource": "GitHub",
       "meta": {
-        "includeInStandard": false,
-        "nameOverride": "Cemu (Dual-Screen)"
+        "includeInStandard": true,
+        "nameOverride": "Cemu"
       }
     },
     {
