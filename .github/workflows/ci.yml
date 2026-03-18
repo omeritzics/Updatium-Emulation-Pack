@@ -17,28 +17,16 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Validate
-        run: python scripts/validate-json.py src/applications.json
-
-      - name: Test
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/test-apps.py --verbose --apks
-
-      - name: Generate
+      - name: Install Just
         run: |
-          python scripts/normalize-json.py src/applications.json
-          python scripts/minify-json.py src/applications.json updatium-emulation-pack-latest.json
+          curl -sSfL https://just.systems/install.sh | bash -s -- --to /usr/local/bin
 
-      - name: Check generated files are up to date
-        run: |
-          if [ -n "$(git diff --name-only)" ]; then
-            echo "Generated files are out of date. Run 'just build' and commit the results."
-            echo ""
-            echo "Changed files:"
-            git diff --name-only
-            echo ""
-            git diff --stat
-            exit 1
-          fi
-          echo "All generated files are up to date."
+      - name: Build
+        run: just build
+
+      - name: Upload JSON as release artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: updatium-emulation-pack-latest
+          path: updatium-emulation-pack-latest.json
+          retention-days: 30
