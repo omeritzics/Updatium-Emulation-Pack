@@ -126,7 +126,7 @@ def _apply_apk_filter(urls: list[str], settings: dict[str, Any]) -> list[str]:
 
 
 def _replace_match_groups(match: re.Match, group_string: str) -> str | None:
-    """Replicate Obtainium's replaceMatchGroupsInString behavior."""
+    """Replicate Updatium's replaceMatchGroupsInString behavior."""
     if re.fullmatch(r"\d+", group_string):
         group_string = f"${group_string}"
     tokens = list(re.finditer(r"\$(\d+)", group_string))
@@ -439,7 +439,7 @@ def _follow_intermediate_links(
                 f"(url={current_url}, regex={step_regex!r})"
             )
 
-        current_url = links[-1]  # Obtainium takes the last link after sorting
+        current_url = links[-1]  # Updatium takes the last link after sorting
 
     return current_url, None
 
@@ -486,7 +486,7 @@ def test_html(app: dict[str, Any], settings: dict[str, Any]) -> TestResult:
         if extract_whole_page:
             search_text = body
         elif apk_links:
-            search_text = apk_links[-1]  # Obtainium uses last link
+            search_text = apk_links[-1]  # Updatium uses last link
         else:
             search_text = ""
 

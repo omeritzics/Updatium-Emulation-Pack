@@ -1,4 +1,4 @@
-"""Minify and filter Obtainium JSON based on variant."""
+"""Minify and filter Updatium JSON based on variant."""
 
 import argparse
 import json
@@ -34,7 +34,7 @@ def minify_json(input_file: str, output_file: str, variant: str = "standard") ->
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Minify and filter Obtainium JSON based on variant"
+        description="Minify and filter Updatium JSON based on variant"
     )
     parser.add_argument("input", help="Input JSON file")
     parser.add_argument("output", help="Output JSON file")

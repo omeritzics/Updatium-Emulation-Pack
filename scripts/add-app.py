@@ -172,7 +172,7 @@ def generate_app_entry(
 
 def main() -> int:
     print("=" * 50)
-    print("  Add New App to Obtainium Emulation Pack")
+    print("  Add New App to Updatium Emulation Pack")
     print("=" * 50)
 
     url = prompt("\nApp URL (GitHub/GitLab/etc.)")
@@ -220,7 +220,7 @@ def main() -> int:
 
     print("")
     app_name_override = input(
-        "App name override - leave blank to skip (sets display name in both Obtainium & README): "
+        "App name override - leave blank to skip (sets display name in both Updatium & README): "
     ).strip()
     if app_name_override:
         print(f"  Will set additionalSettings.appName and meta.nameOverride")

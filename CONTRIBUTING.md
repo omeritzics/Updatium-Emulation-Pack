@@ -10,8 +10,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/RJNY/Obtainium-Emulation-Pack.git
-cd Obtainium-Emulation-Pack
+git clone https://github.com/RJNY/Updatium-Emulation-Pack.git
+cd Updatium-Emulation-Pack
 
 # Make your changes to src/applications.json (or use just add-app)
 just test              # verify configs resolve to real APKs
@@ -26,7 +26,7 @@ utility.just                     # Private helper recipes (imported by justfile)
 src/
   applications.json              # Source of truth - all app definitions
 scripts/
-  constants.py                   # Shared constants and Obtainium source schema
+  constants.py                   # Shared constants and Updatium source schema
   utils.py                       # Shared utility functions and .env loader
   help_formatter.py              # Styled argparse help formatter (ANSI colors)
   validate-json.py               # Validates applications.json
@@ -42,8 +42,8 @@ pages/
   table.md                       # Generated - app tables (do not edit)
   faq.md                         # FAQ section
   footer.md                      # Short section linking here (stitched into README)
-obtainium-emulation-pack-latest.json           # Standard release
-obtainium-emulation-pack-dual-screen-latest.json # Dual-screen release
+updatium-emulation-pack-latest.json           # Standard release
+updatium-emulation-pack-dual-screen-latest.json # Dual-screen release
 ```
 
 ## Adding a New Application
@@ -61,21 +61,21 @@ This will:
 - Prompt you for the GitHub URL
 - Auto-detect the source, author, and app name
 - Ask for the Android package ID and category
-- Generate proper Obtainium settings
+- Generate proper Updatium settings
 - Add the app to `applications.json`
 
-> **Tip:** To find the package ID, open the app in Obtainium - the package ID is displayed directly below the source URL (e.g., `com.example.android`).
+> **Tip:** To find the package ID, open the app in Updatium - the package ID is displayed directly below the source URL (e.g., `com.example.android`).
 
 After running, execute `just build` to regenerate all files.
 
 ### Option B: Manual Add (For complex configs or non-GitHub sources)
 
-#### Step 1: Export the app config from Obtainium
+#### Step 1: Export the app config from Updatium
 
-1. Open Obtainium on your device
+1. Open Updatium on your device
 2. Add the app you want to include (configure it how you want)
 3. Long-press the app and select "Export"
-4. Choose "Obtainium Export" format
+4. Choose "Updatium Export" format
 5. Transfer the JSON to your computer
 
 #### Step 2: Add the app to applications.json
@@ -140,8 +140,8 @@ All steps must pass before merging.
 Before committing, run `just build`, then verify:
 
 - [ ] `just test` passes (all app configs resolve to downloadable APKs)
-- [ ] `obtainium-emulation-pack-latest.json` has been updated
-- [ ] `obtainium-emulation-pack-dual-screen-latest.json` has been updated
+- [ ] `updatium-emulation-pack-latest.json` has been updated
+- [ ] `updatium-emulation-pack-dual-screen-latest.json` has been updated
 - [ ] `README.md` has been updated
 - [ ] The README table shows a friendly application name (use `nameOverride` if not)
 - [ ] The README table links to the correct homepage (use `urlOverride` if not)
@@ -196,12 +196,12 @@ An app can belong to multiple categories.
 
 The pack supports two variants:
 
-- **Standard** (`obtainium-emulation-pack-latest.json`): For regular Android devices
-- **Dual-Screen** (`obtainium-emulation-pack-dual-screen-latest.json`): For dual-screen devices like LG V60/Velvet
+- **Standard** (`updatium-emulation-pack-latest.json`): For regular Android devices
+- **Dual-Screen** (`updatium-emulation-pack-dual-screen-latest.json`): For dual-screen devices like LG V60/Velvet
 
 Some apps have dual-screen-specific forks (e.g., Cemu, MelonDS). Use the `includeInStandard` and `includeInDualScreen` flags to control which variant(s) include each app.
 
-**Why this matters:** Apps with the same Android package ID (`id` field) will conflict in Obtainium. If two apps share an ID (like standard Cemu and dual-screen Cemu), they **must not** both appear in the same JSON file.
+**Why this matters:** Apps with the same Android package ID (`id` field) will conflict in Updatium. If two apps share an ID (like standard Cemu and dual-screen Cemu), they **must not** both appear in the same JSON file.
 
 Example: Standard Cemu excluded from dual-screen, dual-screen fork excluded from standard:
 

@@ -31,14 +31,14 @@ from typing import Any
 
 from constants import GITHUB_NOREPLY_SUFFIX
 from help_formatter import StyledHelpFormatter
-from utils import get_additional_settings, get_application_url, get_display_name, load_dotenv, make_obtainium_link, should_include_app
+from utils import get_additional_settings, get_application_url, get_display_name, load_dotenv, make_updatium_link, should_include_app
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-STANDARD_JSON = REPO_ROOT / "obtainium-emulation-pack-latest.json"
-DUAL_SCREEN_JSON = REPO_ROOT / "obtainium-emulation-pack-dual-screen-latest.json"
+STANDARD_JSON = REPO_ROOT / "updatium-emulation-pack-latest.json"
+DUAL_SCREEN_JSON = REPO_ROOT / "updatium-emulation-pack-dual-screen-latest.json"
 APPLICATIONS_JSON = REPO_ROOT / "src" / "applications.json"
 
-RELEASES_URL = "https://github.com/RJNY/Obtainium-Emulation-Pack/releases/tag"
+RELEASES_URL = "https://github.com/RJNY/Updatium-Emulation-Pack/releases/tag"
 
 SEMVER_PATTERN = re.compile(r"^v?(\d+)\.(\d+)\.(\d+)$")
 
@@ -209,7 +209,7 @@ def make_app_table_row(app: dict[str, Any], change: str) -> str:
     if change == "Removed":
         install = "-"
     else:
-        install = f"[Add to Obtainium!][{ref_key}]"
+        install = f"[Add to Updatium!][{ref_key}]"
     std = "✅" if should_include_app(app, "standard") else "❌"
     ds = "✅" if should_include_app(app, "dual-screen") else "❌"
     return f"| {app_link} | {install} | {change} | {std} | {ds} |"
@@ -217,12 +217,12 @@ def make_app_table_row(app: dict[str, Any], change: str) -> str:
 
 def make_app_reference_link(app: dict[str, Any]) -> str:
     ref_key = _make_ref_key(app)
-    obtainium_link = make_obtainium_link(app)
-    return f"[{ref_key}]: {obtainium_link}"
+    updatium_link = make_updatium_link(app)
+    return f"[{ref_key}]: {updatium_link}"
 
 
 CHANGES_TABLE_HEADER = (
-    "| Application | Add to Obtainium | Change | Standard | Dual-Screen |\n"
+    "| Application | Add to Updatium | Change | Standard | Dual-Screen |\n"
     "|-------------|------------------|--------|----------|-------------|"
 )
 
@@ -355,7 +355,7 @@ def edit_release_notes(notes: str) -> str:
     editor = os.environ.get("EDITOR", "vim")
 
     with tempfile.NamedTemporaryFile(
-        suffix="-release-notes.md", mode="w", delete=False, prefix="obtainium-"
+        suffix="-release-notes.md", mode="w", delete=False, prefix="updatium-"
     ) as f:
         f.write(notes)
         tmp_path = f.name
@@ -378,8 +378,8 @@ def check_working_tree_clean() -> bool:
 def create_versioned_copies(version: str) -> list[Path]:
     copies: list[Path] = []
 
-    standard_versioned = REPO_ROOT / f"obtainium-emulation-pack-{version}.json"
-    dual_versioned = REPO_ROOT / f"obtainium-emulation-pack-dual-screen-{version}.json"
+    standard_versioned = REPO_ROOT / f"updatium-emulation-pack-{version}.json"
+    dual_versioned = REPO_ROOT / f"updatium-emulation-pack-dual-screen-{version}.json"
 
     shutil.copy2(STANDARD_JSON, standard_versioned)
     shutil.copy2(DUAL_SCREEN_JSON, dual_versioned)
@@ -429,7 +429,7 @@ def get_app_count(json_path: Path) -> int:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Create a GitHub release for Obtainium Emulation Pack",
+        description="Create a GitHub release for Updatium Emulation Pack",
         formatter_class=StyledHelpFormatter,
     )
     parser.add_argument(
@@ -521,8 +521,8 @@ def main() -> None:
         print(f"    3. gh release create {version} --title {version} <assets>")
         print()
         print("  Assets:")
-        print(f"    - obtainium-emulation-pack-{version}.json")
-        print(f"    - obtainium-emulation-pack-dual-screen-{version}.json")
+        print(f"    - updatium-emulation-pack-{version}.json")
+        print(f"    - updatium-emulation-pack-dual-screen-{version}.json")
         print()
         return
 
