@@ -411,21 +411,6 @@
       }
     },
     {
-      "id": "app.gamenative",
-      "url": "https://github.com/utkarshdalal/GameNative",
-      "author": "utkarshdalal",
-      "name": "GameNative",
-      "preferredApkIndex": 0,
-      "additionalSettings": {
-        "about": "Native Windows game compatibility layer"
-      },
-      "categories": [
-        "PC Emulation"
-      ],
-      "allowIdChange": false,
-      "overrideSource": "GitHub"
-    },
-    {
       "id": "com.winlator",
       "url": "https://github.com/brunodev85/winlator",
       "author": "brunodev85",

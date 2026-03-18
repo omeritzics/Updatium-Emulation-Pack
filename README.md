@@ -44,7 +44,6 @@ emulation applications to Updatium. Made by [@RJNY](https://github.com/RJNY), mo
 | Application Name | Included? |
 |------------------|----------------------|
 | <a href="https://github.com/Producdevity/gamehub-lite">GameHub Lite</a> | ✅ |
-| <a href="https://github.com/utkarshdalal/GameNative">GameNative</a> | ✅ |
 | <a href="https://github.com/brunodev85/winlator">Winlator</a> | ✅ |
 | <a href="https://github.com/coffincolors/winlator">Winlator CMod</a> | ✅ |
 
