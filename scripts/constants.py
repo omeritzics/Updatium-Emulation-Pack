@@ -1,4 +1,4 @@
-"""Shared constants for Obtainium Emulation Pack scripts."""
+"""Shared constants for Updatium Emulation Pack scripts."""
 
 from typing import Any, NamedTuple
 
@@ -6,14 +6,11 @@ SRC_FILE = "src/applications.json"
 PAGES_DIR = "pages"
 TABLE_FILE = "pages/table.md"
 
-REDIRECT_URL = "http://apps.obtainium.imranr.dev/redirect.html"
-OBTAINIUM_SCHEME = "obtainium://app/"
-
 VARIANTS = ("standard", "dual-screen")
 
 GITHUB_NOREPLY_SUFFIX = "@users.noreply.github.com"
 
-# Valid overrideSource values (runtime type names from Obtainium)
+# Valid overrideSource values (runtime type names from Updatium)
 VALID_SOURCES = {
     "GitHub",
     "GitLab",
@@ -68,7 +65,7 @@ SOURCE_HOST_MAP = {
 }
 
 # Deprecated keys still accepted for backward compatibility.
-# Obtainium auto-migrates these on load (see appJSONCompatibilityModifiers
+# Updatium auto-migrates these on load (see appJSONCompatibilityModifiers
 # in lib/providers/source_provider.dart). New configs should use the
 # replacement key instead.
 DEPRECATED_SETTINGS_KEYS: dict[str, str] = {
@@ -78,8 +75,8 @@ DEPRECATED_SETTINGS_KEYS: dict[str, str] = {
 }
 
 
-# Obtainium additionalSettings schema: single source of truth for key metadata
-# (default value, applicable sources, regex flag). Derived from Obtainium source
+# Updatium additionalSettings schema: single source of truth for key metadata
+# (default value, applicable sources, regex flag). Derived from Updatium source
 # code (lib/app_sources/*.dart). Dict insertion order defines canonical key
 # ordering used by normalize-json.py and export hydration.
 
