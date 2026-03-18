@@ -11,11 +11,10 @@ _generate-help:
     @echo '  {{GREEN}}just generate help{{NORMAL}}         {{DIM}}Show this help{{NORMAL}}'
     @echo '  {{GREEN}}just generate table{{NORMAL}}        {{DIM}}Generate markdown table{{NORMAL}}'
     @echo '  {{GREEN}}just generate readme{{NORMAL}}       {{DIM}}Generate README (includes table){{NORMAL}}'
-    @echo '  {{GREEN}}just generate standard{{NORMAL}}     {{DIM}}Generate standard release JSON{{NORMAL}}'
-    @echo '  {{GREEN}}just generate dual-screen{{NORMAL}}  {{DIM}}Generate dual-screen release JSON{{NORMAL}}'
+    @echo '  {{GREEN}}just generate standard{{NORMAL}}     {{DIM}}Generate release JSON{{NORMAL}}'
 
 [private]
-_generate-all: _generate-readme _generate-standard _generate-dual-screen
+_generate-all: _generate-readme _generate-standard
 
 [private]
 _generate-table:
@@ -31,8 +30,6 @@ _generate-readme: _generate-table
 
 [private]
 _generate-standard:
-    @python scripts/minify-json.py src/applications.json updatium-emulation-pack-latest.json --variant standard
+    @python scripts/minify-json.py src/applications.json updatium-emulation-pack-latest.json
 
-[private]
-_generate-dual-screen:
-    @python scripts/minify-json.py src/applications.json updatium-emulation-pack-dual-screen-latest.json --variant dual-screen
+# Removed dual-screen generation - now using unified single variant

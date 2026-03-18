@@ -657,11 +657,7 @@
         "Emulator"
       ],
       "allowIdChange": true,
-      "overrideSource": "GitHub",
-      "meta": {
-        "includeInStandard": true,
-        "nameOverride": "MelonDS"
-      }
+      "overrideSource": "GitHub"
     },
     {
       "id": "info.cemu.cemu",
@@ -678,11 +674,7 @@
         "Emulator"
       ],
       "allowIdChange": false,
-      "overrideSource": "GitHub",
-      "meta": {
-        "includeInStandard": true,
-        "nameOverride": "Cemu"
-      }
+      "overrideSource": "GitHub"
     },
     {
       "id": "come.nanodata.armsx2",
@@ -817,10 +809,7 @@
         "Utilities"
       ],
       "allowIdChange": false,
-      "overrideSource": "GitHub",
-      "meta": {
-        "includeInStandard": false
-      }
+      "overrideSource": "GitHub"
     },
     {
       "id": "com.esde.companion",
@@ -836,10 +825,7 @@
         "Utilities"
       ],
       "allowIdChange": false,
-      "overrideSource": "GitHub",
-      "meta": {
-        "includeInStandard": false
-      }
+      "overrideSource": "GitHub"
     },
     {
       "id": "jr.brian.home",
@@ -857,10 +843,7 @@
         "Utilities"
       ],
       "allowIdChange": false,
-      "overrideSource": "GitHub",
-      "meta": {
-        "includeInStandard": false
-      }
+      "overrideSource": "GitHub"
     },
     {
       "id": "com.iisulauncher",

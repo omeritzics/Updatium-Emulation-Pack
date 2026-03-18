@@ -35,7 +35,6 @@ from utils import get_additional_settings, get_application_url, get_display_name
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 STANDARD_JSON = REPO_ROOT / "updatium-emulation-pack-latest.json"
-DUAL_SCREEN_JSON = REPO_ROOT / "updatium-emulation-pack-dual-screen-latest.json"
 APPLICATIONS_JSON = REPO_ROOT / "src" / "applications.json"
 
 RELEASES_URL = "https://github.com/RJNY/Updatium-Emulation-Pack/releases/tag"
@@ -379,13 +378,10 @@ def create_versioned_copies(version: str) -> list[Path]:
     copies: list[Path] = []
 
     standard_versioned = REPO_ROOT / f"updatium-emulation-pack-{version}.json"
-    dual_versioned = REPO_ROOT / f"updatium-emulation-pack-dual-screen-{version}.json"
 
     shutil.copy2(STANDARD_JSON, standard_versioned)
-    shutil.copy2(DUAL_SCREEN_JSON, dual_versioned)
 
     copies.append(standard_versioned)
-    copies.append(dual_versioned)
     return copies
 
 
@@ -522,23 +518,20 @@ def main() -> None:
         print()
         print("  Assets:")
         print(f"    - updatium-emulation-pack-{version}.json")
-        print(f"    - updatium-emulation-pack-dual-screen-{version}.json")
         print()
         return
 
-    for f in (STANDARD_JSON, DUAL_SCREEN_JSON):
+    for f in (STANDARD_JSON,):
         if not f.exists():
             print(f"Error: Expected artifact not found: {f}")
             print("Did you run `just build` first?")
             sys.exit(1)
 
     std_count = get_app_count(STANDARD_JSON)
-    ds_count = get_app_count(DUAL_SCREEN_JSON)
 
     print()
     print(f"Version:        {version}")
-    print(f"Standard apps:  {std_count}")
-    print(f"Dual-screen:    {ds_count}")
+    print(f"Apps included:  {std_count}")
     if notes:
         preview = notes.split("\n")[0]
         print(f"Notes preview:  {preview[:80]}{'...' if len(preview) > 80 else ''}")
