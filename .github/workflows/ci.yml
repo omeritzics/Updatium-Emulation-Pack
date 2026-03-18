@@ -28,8 +28,7 @@ jobs:
       - name: Generate
         run: |
           python scripts/normalize-json.py src/applications.json
-          python scripts/minify-json.py src/applications.json updatium-emulation-pack-latest.json --variant standard
-          python scripts/minify-json.py src/applications.json updatium-emulation-pack-dual-screen-latest.json --variant dual-screen
+          python scripts/minify-json.py src/applications.json updatium-emulation-pack-latest.json
 
       - name: Check generated files are up to date
         run: |
