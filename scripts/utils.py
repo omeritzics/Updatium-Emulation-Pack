@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
 
-from constants import UPDATIUM_SCHEME, REDIRECT_URL, SETTINGS_SCHEMA, SOURCE_HOST_MAP
+from constants import SETTINGS_SCHEMA, SOURCE_HOST_MAP
 
 
 def load_dotenv() -> None:
@@ -115,4 +115,3 @@ def make_updatium_link(app: dict[str, Any]) -> str:
         "allowIdChange": app.get("allowIdChange"),
     }
     encoded = urllib.parse.quote(json.dumps(payload, separators=(",", ":")), safe="")
-    return f"{REDIRECT_URL}?r={UPDATIUM_SCHEME}{encoded}"
