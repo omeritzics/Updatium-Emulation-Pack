@@ -47,7 +47,6 @@ emulation applications to Updatium. Made by [@RJNY](https://github.com/RJNY), mo
 | <a href="https://github.com/utkarshdalal/GameNative">GameNative</a> | ✅ | ✅ |
 | <a href="https://github.com/brunodev85/winlator">Winlator</a> | ✅ | ✅ |
 | <a href="https://github.com/coffincolors/winlator">Winlator CMod</a> | ✅ | ✅ |
-| <a href="https://github.com/StevenMXZ/Winlator-Ludashi">Winlator-Ludashi</a> | ✅ | ✅ |
 
 ### Streaming
 
