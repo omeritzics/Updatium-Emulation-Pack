@@ -675,7 +675,7 @@
       "allowIdChange": true,
       "overrideSource": "GitHub",
       "meta": {
-        "includeInStandard": yes,
+        "includeInStandard": true,
         "nameOverride": "MelonDS"
       }
     },
