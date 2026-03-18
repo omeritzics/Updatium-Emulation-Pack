@@ -460,22 +460,6 @@
       }
     },
     {
-      "id": "com.winlator.ludashi",
-      "url": "https://github.com/StevenMXZ/Winlator-Ludashi",
-      "author": "StevenMXZ",
-      "name": "Winlator-Ludashi",
-      "preferredApkIndex": 0,
-      "additionalSettings": {
-        "apkFilterRegEx": "bionic-vanilla",
-        "about": "Winlator fork with Ludashi optimizations"
-      },
-      "categories": [
-        "PC Emulation"
-      ],
-      "allowIdChange": true,
-      "overrideSource": "GitHub"
-    },
-    {
       "id": "xyz.aethersx2.android",
       "url": "https://github.com/Trixarian/NetherSX2-classic",
       "author": "Trixarian",
