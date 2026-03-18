@@ -1,4 +1,4 @@
-"""Shared utility functions for Obtainium Emulation Pack scripts."""
+"""Shared utility functions for Updatium Emulation Pack scripts."""
 
 import copy
 import json
@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
 
-from constants import OBTAINIUM_SCHEME, REDIRECT_URL, SETTINGS_SCHEMA, SOURCE_HOST_MAP
+from constants import UPDATIUM_SCHEME, REDIRECT_URL, SETTINGS_SCHEMA, SOURCE_HOST_MAP
 
 
 def load_dotenv() -> None:
@@ -93,12 +93,12 @@ def stringify_additional_settings(
     settings: dict[str, Any],
     source: str | None = None,
 ) -> str:
-    """Hydrate and stringify settings for Obtainium consumption."""
+    """Hydrate and stringify settings for Updatium consumption."""
     hydrated = hydrate_settings(settings, source)
     return json.dumps(hydrated, separators=(",", ":"))
 
 
-def make_obtainium_link(app: dict[str, Any]) -> str:
+def make_updatium_link(app: dict[str, Any]) -> str:
     settings = get_additional_settings(app)
     source = app.get("overrideSource")
     payload = {
@@ -115,4 +115,4 @@ def make_obtainium_link(app: dict[str, Any]) -> str:
         "allowIdChange": app.get("allowIdChange"),
     }
     encoded = urllib.parse.quote(json.dumps(payload, separators=(",", ":")), safe="")
-    return f"{REDIRECT_URL}?r={OBTAINIUM_SCHEME}{encoded}"
+    return f"{REDIRECT_URL}?r={UPDATIUM_SCHEME}{encoded}"
