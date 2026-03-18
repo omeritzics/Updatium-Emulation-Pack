@@ -1,11 +1,11 @@
-"""Generate markdown tables for Obtainium Emulation Pack README."""
+"""Generate markdown tables for updatium Emulation Pack README."""
 
 import json
 import sys
 from collections import defaultdict
 from typing import Any
 
-from utils import get_application_url, get_display_name, make_obtainium_link, should_include_app
+from utils import get_application_url, get_display_name, make_updatium_link, should_include_app
 
 
 def generate_category_tables(apps: list[dict[str, Any]]) -> str:
@@ -20,10 +20,10 @@ def generate_category_tables(apps: list[dict[str, Any]]) -> str:
     for category in sorted(categorized.keys()):
         markdown_sections.append(f"### {category}\n")
         markdown_sections.append(
-            "| Application Name | Add to Obtainium | Included in export json? | Included in DS json? |"
+            "| Application Name | Included in export json? | Included in DS json? |"
         )
         markdown_sections.append(
-            "|------------------|------------------|---------------------------|----------------------|"
+            "|------------------|---------------------------|----------------------|"
         )
 
         apps_in_category = sorted(
@@ -38,8 +38,8 @@ def generate_category_tables(apps: list[dict[str, Any]]) -> str:
             display_name = (
                 f'<a href="{get_application_url(app)}">{get_display_name(app)}</a>'
             )
-            obtainium_link = make_obtainium_link(app)
-            badge_md = f'<a href="{obtainium_link}">Add to Obtainium!</a>'
+            updatium_link = make_updatium_link(app)
+            badge_md = f'<a href="{updatium_link}">Add to updatium!</a>'
             include_standard = "✅" if should_include_app(app, "standard") else "❌"
             include_dual_screen = (
                 "✅" if should_include_app(app, "dual-screen") else "❌"
