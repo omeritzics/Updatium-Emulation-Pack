@@ -1,12 +1,6 @@
 # Contributing
 **Please do not contribute to this repository. Instead, look up to contribute to https://github.com/RJNY/Obtainium-Emulation-Pack and/or https://github.com/omeritzics/Updatium.**
 
-## Prerequisites
-
-- Python 3.11+
-- [just](https://github.com/casey/just) (task runner)
-- Git
-
 ## Quick Start
 
 ```bash
@@ -125,29 +119,6 @@ just test              # verify your app config resolves to a real APK
 just build             # test, validate, normalize, and generate all output files
 ```
 
-## CI
-
-Pull requests and pushes to `main` are checked by GitHub Actions (single job):
-
-1. **Validate** - structural checks, regex syntax, source types
-2. **Test** - verifies all app configs resolve to real APKs
-3. **Generate** - normalizes, generates README, builds release JSONs
-4. **Diff check** - fails if generated files are out of date
-
-All steps must pass before merging.
-
-## Pre-Commit Checklist
-
-Before committing, run `just build`, then verify:
-
-- [ ] `just test` passes (all app configs resolve to downloadable APKs)
-- [ ] `updatium-emulation-pack-latest.json` has been updated
-- [ ] `updatium-emulation-pack-dual-screen-latest.json` has been updated
-- [ ] `README.md` has been updated
-- [ ] The README table shows a friendly application name (use `nameOverride` if not)
-- [ ] The README table links to the correct homepage (use `urlOverride` if not)
-- [ ] Beta apps are excluded with `meta.excludeFromExport: true`
-
 ## Available Commands
 
 Run `just` to see all available commands. Recipes with `*args` accept `-h` for help.
@@ -173,8 +144,6 @@ These fields in the `meta` object control how apps are processed:
 | --------------------- | ------ | ------- | ------------------------------------------------------------------- |
 | `excludeFromExport`   | bool   | `false` | Exclude from both release JSON files. Use for beta/unstable apps.   |
 | `excludeFromTable`    | bool   | `false` | Exclude from the README table.                                      |
-| `includeInStandard`   | bool   | `true`  | Include in standard release. Set `false` for dual-screen-only apps. |
-| `includeInDualScreen` | bool   | `true`  | Include in dual-screen release. Set `false` for standard-only apps. |
 | `nameOverride`        | string | `null`  | Override the display name in the README table.                      |
 | `urlOverride`         | string | `null`  | Override the homepage link in the README table.                     |
 
@@ -189,58 +158,9 @@ Apps are organized into categories that appear as sections in the README table:
 | `Utilities`    | Helper apps (Syncthing, OdinTools, LED controllers, etc.)        |
 | `PC Emulation` | Windows/PC game layers (Winlator, etc.)                          |
 | `Streaming`    | Game streaming clients (Moonlight, etc.)                         |
-| `Track Only`   | Version tracking without APK downloads (drivers, meta-packages)  |
 
 An app can belong to multiple categories.
 
-## Dual-Screen vs Standard
-
-The pack supports two variants:
-
-- **Standard** (`updatium-emulation-pack-latest.json`): For regular Android devices
-- **Dual-Screen** (`updatium-emulation-pack-dual-screen-latest.json`): For dual-screen devices like LG V60/Velvet
-
-Some apps have dual-screen-specific forks (e.g., Cemu, MelonDS). Use the `includeInStandard` and `includeInDualScreen` flags to control which variant(s) include each app.
-
-**Why this matters:** Apps with the same Android package ID (`id` field) will conflict in Updatium. If two apps share an ID (like standard Cemu and dual-screen Cemu), they **must not** both appear in the same JSON file.
-
-Example: Standard Cemu excluded from dual-screen, dual-screen fork excluded from standard:
-
-```json
-// Standard Cemu - exclude from dual-screen JSON
-{
-  "id": "info.cemu.cemu",
-  "name": "Cemu",
-  "url": "https://github.com/SSimco/Cemu",
-  "categories": ["Emulator"],
-  "meta": { "includeInDualScreen": false }
-}
-
-// Dual-screen Cemu fork - exclude from standard JSON
-{
-  "id": "info.cemu.cemu",
-  "name": "Cemu",
-  "url": "https://github.com/SapphireRhodonite/Cemu",
-  "categories": ["Dual Screen"],
-  "meta": { "includeInStandard": false }
-}
-```
-
-## Choosing the Right Category and Variant
-
-Use this decision tree:
-
-1. **Is this app device-specific?** (e.g., AYN Thor frontend)
-
-   - Yes: Set `includeInStandard: false` and use appropriate category
-   - No: Continue to step 2
-
-2. **Does this app share an ID with another app in the pack?** (e.g., forks, beta builds, dual-screen variants)
-
-   - Yes: Only one app per ID can be in each release JSON. Options:
-     - Use `includeInStandard`/`includeInDualScreen` to split between variants
-     - Use `excludeFromExport: true` on the less stable version (e.g., nightly builds)
-   - No: App can be in both variants (default)
 
 3. **Is this app stable and ready for users?**
    - Yes: Include normally
