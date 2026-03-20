@@ -1,4 +1,5 @@
 # Contributing
+**Please do not contribute to this repository. Instead, look up to contribute to https://github.com/RJNY/Obtainium-Emulation-Pack and/or https://github.com/omeritzics/Updatium.**
 
 ## Prerequisites
 
