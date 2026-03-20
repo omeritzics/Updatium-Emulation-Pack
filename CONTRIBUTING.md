@@ -32,13 +32,7 @@ scripts/
   minify-json.py                 # Creates release JSON files
   normalize-json.py              # Normalize key order and backfill defaults
   release.py                     # Automated release workflow (tag, push, gh release)
-pages/
-  header.md                      # README header/intro
-  table.md                       # Generated - app tables (do not edit)
-  faq.md                         # FAQ section
-  footer.md                      # Short section linking here (stitched into README)
-updatium-emulation-pack-latest.json           # Standard release
-updatium-emulation-pack-dual-screen-latest.json # Dual-screen release
+updatium-emulation-pack-latest.json           # The file to import to Updatium
 ```
 
 ## Adding a New Application
